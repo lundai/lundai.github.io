@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Lund AI Initiative</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="{{ site.description }}">
+		<title>{{ site.title }}</title>
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | relative_url }}">
 	</head>
 	<body>
-		{{ content }}
+		<nav id="navigation-bar">
+			<div id="logo">AI</div>
+		</nav>
+		<main>
+			{{ content }}
+		</main>
 	</body>
 </html>
 
