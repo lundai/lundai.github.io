@@ -6,14 +6,25 @@
 		<meta name="description" content="{{ site.description }}">
 		<title>{{ site.title }}</title>
 		<link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | relative_url }}">
+		<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet"> 
 	</head>
 	<body>
-		<nav id="navigation-bar">
-			<div id="logo">AI</div>
-		</nav>
-		<main>
-			{{ content }}
-		</main>
+		<div id="content">
+			<div id="left">
+				<div id="logo-container">
+					<img src="{{ '/assets/logo.png' | relative_url }}">
+				</div>
+				<nav>
+					<div><a href="{{ '/' | relative_url }}">Hem</a></div>
+					<div><a href="{{ '/news/' | relative_url }}">Nyheter</a></div>
+					<div><a href="{{ '/events/' | relative_url }}">Evenemang</a></div>
+					<div><a href="{{ '/contact/' | relative_url }}">Kontakt</a></div>
+				</nav>
+			</div>
+			<main>
+				{{ content }}
+			</main>
+		</div>
 	</body>
 </html>
 

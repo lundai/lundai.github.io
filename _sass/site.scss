@@ -2,7 +2,120 @@
 
 @import "bootstrap/scss/bootstrap";
 
-#navigation-bar > #logo {
-	font-size: 20pt;
+$accentColor: #f8be39;
+$baseColor: #13415b;
+$shadow: 0px 0px 50px 10px rgba(0,0,0,0.5);
+$background: url(/assets/background.jpg);
+
+body {
+	font-family: "Barlow", sans-serif;
+	font-weight: 300;
+	background: $background;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+
+	>#content {
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+
+		>#left {
+			z-index: 10;
+			box-shadow: $shadow;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+
+			>#logo-container {
+				display: flex;
+				flex-grow: 1;
+				justify-content: center;
+				>img {
+					margin: auto;
+					width: 250px;
+				}
+			}
+
+			>nav {
+				display: flex;
+				flex-direction: column;
+				flex-grow: 2;
+				text-align: center;
+				font-size: 2em;
+
+				>div {
+					line-height: 70px;
+					display: block;
+					a {
+						&:link, &:visited, &:hover {
+							color: $accentColor;
+							text-transform: uppercase;
+							text-decoration: none;
+							letter-spacing: 0.1em;
+							transition: letter-spacing 0.5s;
+						}
+
+						&:hover {
+							letter-spacing: 0.2em;
+						}
+					}
+				}
+			}
+		}
+
+		>main {
+			flex-basis: 0;
+			flex-grow: 3;
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+			background-color: darken($baseColor, 10%);
+
+			>div.post {
+				margin: 20px;
+			}
+		}
+	}
+}
+
+.post {
+	color: lighten($baseColor, 60%);
+	padding: 30px;
+
+	p {
+		margin-bottom: 50px;
+	}
+
+	a {
+		&:link {
+			color: $accentColor;
+		}
+
+		&:visited, &:hover {
+			color: darken($accentColor, 20%);
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	h1 {
+		margin: 30px 0;
+		font-size: 4em;
+		color: $accentColor;
+	}
+
+	h2 {
+		margin: 20px 0;
+		font-size: 2em;
+		color: $accentColor;
+	}
 }
 
