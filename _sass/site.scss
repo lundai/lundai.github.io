@@ -2,10 +2,25 @@
 
 @import "bootstrap/scss/bootstrap";
 
+// // Dark
+// $accentColor: #f8be39;
+// $baseColor: #13415b;
+// $shadow: 0px 0px 50px 10px rgba(0,0,0,0.5);
+// $background: url(/assets/background.jpg);
+// $contentBackground: darken($baseColor, 10%);
+// $contentColor: lighten($baseColor, 60%);
+// $navColor: $accentColor;
+// $headerColor: $accentColor;
+
+// Bright
 $accentColor: #f8be39;
 $baseColor: #13415b;
-$shadow: 0px 0px 50px 10px rgba(0,0,0,0.5);
-$background: url(/assets/background.jpg);
+$shadow: 0px 0px 1px 0px $baseColor;
+$background: #eee;
+$contentBackground: $background;
+$contentColor: $baseColor;
+$navColor: $baseColor;
+$headerColor: $baseColor;
 
 body {
 	font-family: "Barlow", sans-serif;
@@ -36,9 +51,11 @@ body {
 				display: flex;
 				flex-grow: 1;
 				justify-content: center;
-				>img {
+				>a {
+					>img {
+						width: 250px;
+					}
 					margin: auto;
-					width: 250px;
 				}
 			}
 
@@ -54,7 +71,7 @@ body {
 					display: block;
 					a {
 						&:link, &:visited, &:hover {
-							color: $accentColor;
+							color: $navColor;
 							text-transform: uppercase;
 							text-decoration: none;
 							letter-spacing: 0.1em;
@@ -75,7 +92,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			padding: 20px;
-			background-color: darken($baseColor, 10%);
+			background-color: $contentBackground;
 
 			>div.post {
 				margin: 20px;
@@ -85,11 +102,16 @@ body {
 }
 
 .post {
-	color: lighten($baseColor, 60%);
-	padding: 30px;
+	color: $contentColor;
+	padding: 30px 80px;
+	font-size: 14pt;
 
 	p {
 		margin-bottom: 50px;
+
+		b, strong {
+			font-weight: 600;
+		}
 	}
 
 	a {
@@ -107,15 +129,18 @@ body {
 	}
 
 	h1 {
-		margin: 30px 0;
+		font-weight: 300;
+		margin-bottom: 30px;
+		margin-left: 30px;
 		font-size: 4em;
-		color: $accentColor;
+		color: $headerColor;
 	}
 
 	h2 {
-		margin: 20px 0;
+		font-weight: 300;
+		margin-bottom: 20px;
 		font-size: 2em;
-		color: $accentColor;
+		color: $headerColor;
 	}
 }
 

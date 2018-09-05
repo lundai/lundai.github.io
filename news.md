@@ -18,7 +18,7 @@ knocking on my door. <a href="/">Read more.</a>
 
 ## Old News
 
-Some stuff that used to be innovative and cool but really isn't
+Some stuff that used to be innovative and cool but really aren't
 anymore. <a href="/">Read more.</a>
 
 
