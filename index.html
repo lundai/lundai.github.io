@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lund AI Initiative</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="{{ site.description }}">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/construction.css' | relative_url }}">
+	</head>
+	<body>
+		<div id="locked">
+			<img id="logo" src="{{ '/assets/logo-dark.png' | relative_url }}">
+			<div id="contact">
+				<div>
+					<a href="https://www.facebook.com/{{ site.social_media.facebook }}">
+						{% include svg file='icons/sm/facebook.svg' %}
+						@{{ site.social_media.facebook }}
+					</a>
+				</div>
+				<div>
+					<a href="mailto:{{ site.email }}">
+						{% include svg file='icons/mail.svg' %}
+						{{ site.email }}
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

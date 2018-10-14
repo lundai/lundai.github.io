@@ -1,0 +1,65 @@
+---
+---
+@import "bootstrap/scss/bootstrap";
+
+$accentColor: #16435d;
+$contrastColor: #f8be39;
+
+body {
+	font-family: "Barlow", sans-serif;
+	//font-weight: 300;
+	background: #eeeef5;
+}
+
+#locked {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 400px;
+	max-width: 670px;
+	width: 40vw;
+
+	#logo {
+		width: 100%;
+	}
+
+	#contact {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		
+		font-weight: 500;
+		//text-transform: uppercase;
+		letter-spacing: 1px;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		a {
+			&:link, &:visited {
+				svg {
+					transition: fill 0.2s;
+				}
+				text-decoration: none;
+				color: inherit;
+			}
+
+			&:hover, &:active {
+				svg {
+					fill: $contrastColor;
+				}
+			}
+		}
+
+		div {
+			width: 210px;
+			padding: 10px;
+			svg {
+				fill: $accentColor;
+				margin-right: 5px;
+			}
+		}
+	}
+}
+

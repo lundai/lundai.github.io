@@ -4,6 +4,7 @@
 
 layout: page
 title: Välkommen
+published: false
 ---
 
 **Lund AI Initiative** är en ideell förening för att främja
